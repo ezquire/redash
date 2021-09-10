@@ -39,10 +39,6 @@ services:
           property: hostport
       - fromGroup: redash-shared
       - fromGroup: redash-mail
-      - key: QUEUES
-        value: "celery"
-      - key: WORKERS_COUNT
-        value: 1
 
   - type: worker
     name: redash-worker
@@ -62,7 +58,9 @@ services:
       - fromGroup: redash-shared
       - fromGroup: redash-mail
       - key: QUEUES
-        value: "queries,scheduled_queries,schemas"
+        value: "periodic emails default"
+      - key: WORKER_COUNT
+        value: 1
 
   - type: pserv
     name: redash-redis
