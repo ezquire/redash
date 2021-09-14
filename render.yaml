@@ -58,7 +58,7 @@ services:
       - fromGroup: redash-shared
       - fromGroup: redash-mail
       - key: QUEUES
-        value: "periodic emails default"
+        value: "queries,scheduled_queries,schemas,periodic,emails,default"
       - key: WORKER_COUNT
         value: 1
 
