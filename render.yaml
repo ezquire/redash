@@ -75,7 +75,7 @@ envVarGroups:
   - name: redash-shared
     envVars:
       - key: REDASH_LOG_LEVEL
-        value: "INFO"
+        value: "DEBUG"
       - key: REDASH_COOKIE_SECRET
         generateValue: true
 
