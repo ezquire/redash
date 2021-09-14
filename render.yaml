@@ -59,7 +59,7 @@ services:
       - fromGroup: redash-mail
       - key: QUEUES
         value: "periodic emails default"
-      - key: WORKER_COUNT
+      - key: WORKERS_COUNT
         value: 1
 
   - type: pserv
